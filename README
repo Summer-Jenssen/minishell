@@ -1,9 +1,8 @@
-This "minishell" was a project intended to famialiarize myself more with the innerworkings of a shell. It features a few custom command implementations, uses exec to do the remainder, implements an interupt handler for SIGINT (ctrl + C), and features some error handling.
+This "minishell" was a  C project intended to familiarize myself more with the inner workings of a shell. It features a few custom command implementations, while using fork and execvp to do the remainder, implements an interrupt handler for SIGINT (ctrl + C), and features some error handling.
 
-Custom commands are as follows: (Attempting to input too few or two many arguments will result in an error)
+Custom commands are as follows: (Attempting to input too many arguments will result in an error)
 * cd [directory] - changes the current directory to [directory]. A ~ will expand to your home directory! 
 * pwd - prints the current working directory
-* lf - lists every file and directory in your current working directory, excluding those that start with . or ..
-* lp - lists all currently running processes by reading /proc sorted by their PID! Owner, and the command from cmdline are also listed. 
+* lf - lists every file and directory in your current working directory, excluding . and ..
+* lp - lists all currently running processes by reading /proc sorted by their PID! Owner and the command are also listed.  
 * exit - exits minishell
-
